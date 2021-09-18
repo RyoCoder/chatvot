@@ -53,8 +53,8 @@ async def type_and_send(message):
 @luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub](https://github.com/thehamkercat/LunaChatBot)"
-        + " | [Group](t.me/PatheticProgrammers)",
+        "[RYOSTAR](t.me/ryostar)"
+        + " | [Group](t.me/owohub)",
         disable_web_page_preview=True,
     )
 
@@ -63,7 +63,7 @@ async def repo(_, message):
 async def start(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
-    await message.reply_text("/repo - Get Repo Link")
+    await message.reply_text("/repo - Get info")
 
 
 @luna.on_message(
@@ -82,7 +82,7 @@ async def chat(_, message):
             return
     else:
         match = re.search(
-            "[.|\n]{0,}luna[.|\n]{0,}",
+            "[.|\n]{0,}mtp[.|\n]{0,}",
             message.text.strip(),
             flags=re.IGNORECASE,
         )
